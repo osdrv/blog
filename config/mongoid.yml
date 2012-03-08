@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  database: blog_development
+
+test:
+  host: localhost
+  database: blog_test
+
+production:
+  host: localhost
+  database: blog
