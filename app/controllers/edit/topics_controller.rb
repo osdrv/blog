@@ -1,2 +1,2 @@
-class Edit::TopicsController < ApplicationController
+class Edit::TopicsController < InheritedResources::Admin
 end

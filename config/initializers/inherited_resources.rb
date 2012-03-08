@@ -1,2 +1,10 @@
-require "inherited_resources/admin"
-require "inherited_resources/application"
+module MongoidActions
+  def collection
+    get_collection_ivar || set_collection_ivar(end_of_association_chain.all)
+  end
+end
+
+InheritedResources::Base.send :include, MongoidActions
+
+#require "inherited_resources/admin"
+#require "inherited_resources/application"
