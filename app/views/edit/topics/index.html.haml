@@ -1,5 +1,9 @@
 %h1 Топики
 
+- if collection.length > 10
+  %a.btn.btn-primary{ :href => "#{new_resource_url}" }
+    %i.icon-plus-sign.icon-white
+    Новый топик
 
 %ul
   - collection.each do |topic|

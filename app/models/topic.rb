@@ -12,5 +12,7 @@ class Topic
   belongs_to :t_blog
 
   sluggable :slug
-  
+
+  validates_presence_of :t_blog
+
 end
