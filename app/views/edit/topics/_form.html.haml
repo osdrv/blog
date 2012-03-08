@@ -1,0 +1,33 @@
+= form_for [:edit, resource] do |f|
+  .field
+    = f.label :t_blog
+    = f.select :t_blog, TBlog.all.map{ |b| [ b.id, b.name ] }
+  .field
+    = f.label :title
+    = f.text_field :title, :style => "width: 640px;"
+  .field
+    = f.label :slug
+    = f.text_field :slug, :style => "width: 640px;"
+  .field
+    = f.label :text
+    = f.text_area :text, :rows => 20, :style => "width: 640px;"
+  .field
+    = f.label :tags
+    = f.text_field :tags, :style => "width: 640px;"
+  .field
+    = f.label :is_draft
+    = f.check_box :is_draft
+  .field
+    = f.label :created_at
+    = f.date_select :created_at
+  .field
+    %a.btn.btn-success.submit{ :href => "#" }
+      %i.icon-ok.icon-white
+      Сохранить
+    %a.btn.btn-inverse{ :href => "#{collection_url}" }
+      %i.icon-arrow-left.icon-white
+      К списку
+    - if !resource.new?
+      %a.btn.btn-danger{ :href => "#{resource_url}", :method => "delete", :confirm => "Удалить топик?" }
+        %i.icon-remove.icon-white
+        Удалить

@@ -6,5 +6,5 @@ end
 
 InheritedResources::Base.send :include, MongoidActions
 
-#require "inherited_resources/admin"
-#require "inherited_resources/application"
+require "inherited_resources/admin"
+require "inherited_resources/application"

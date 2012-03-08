@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    label:
+      topic:
+        t_blog: Блог
+        title: Заголовок
+        slug: Хеш
+        text: Текст
+        tags: Теги
+        is_draft: В черновиках
+        created_at: Опубликовано

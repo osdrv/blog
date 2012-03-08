@@ -1,0 +1,11 @@
+%h1 Топики
+
+
+%ul
+  - collection.each do |topic|
+    %li
+      %a{ :href => "#{resource_url( topic )}" } topic.title
+
+%a.btn.btn-primary{ :href => "#{new_resource_url}" }
+  %i.icon-plus-sign.icon-white
+  Новый топик

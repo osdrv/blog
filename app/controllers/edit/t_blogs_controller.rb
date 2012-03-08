@@ -1,2 +1,2 @@
-class Edit::TBlogsController < ApplicationController
+class Edit::TBlogsController < Edit::AdminController
 end

@@ -7,7 +7,7 @@ class Topic
   field :title, :type => String
   field :text, :type => String
   field :tags, :type => Array
-  field :draft, :type => Boolean, :default => true
+  field :is_draft, :type => Boolean, :default => true
 
   belongs_to :t_blog
 
