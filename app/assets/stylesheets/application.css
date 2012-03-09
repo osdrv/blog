@@ -13,3 +13,7 @@
 */
 
 body { padding: 20px; }
+
+.field_with_errors>label,.field_with_errors .help-block,.field_with_errors .help-inline{color:#b94a48;}
+.field_with_errors input,.field_with_errors select,.field_with_errors textarea{color:#b94a48;border-color:#b94a48;}.field_with_errors input:focus,.field_with_errors select:focus,.field_with_errors textarea:focus{border-color:#953b39;-webkit-box-shadow:0 0 6px #d59392;-moz-box-shadow:0 0 6px #d59392;box-shadow:0 0 6px #d59392;}
+.field_with_errors .input-prepend .add-on,.field_with_errors .input-append .add-on{color:#b94a48;background-color:#f2dede;border-color:#b94a48;}

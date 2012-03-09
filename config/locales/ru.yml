@@ -9,3 +9,6 @@ ru:
         tags: Теги
         is_draft: В черновиках
         created_at: Опубликовано
+      t_blog:
+        title: Название
+        domain: Адрес

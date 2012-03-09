@@ -1,0 +1,18 @@
+= form_for [:edit, resource] do |f|
+  .control-group
+    = f.label :title, :class => "control-label"
+    .controls
+      = f.text_field :title, :style => "width: 640px;"
+  .control-group
+    = f.label :domain, :class => "control-label"
+    .controls
+      = f.text_field :domain, :style => "width: 640px;"
+  .control-group
+    = f.submit "Сохранить", :class => "btn btn-primary"
+    %a.btn.btn-inverse{ :href => "#{collection_url}" }
+      %i.icon-arrow-left.icon-white
+      К списку
+    - if !resource.new?
+      %a.btn.btn-danger{ :href => "#{resource_url}", :method => "delete", :confirm => "Удалить блог?" }
+        %i.icon-remove.icon-white
+        Удалить

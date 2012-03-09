@@ -1,4 +1,7 @@
 class Edit::AdminController < InheritedResources::Base
+  
+  include InheritedResources::SociableGuy
+  
   respond_to :json, :html
   before_filter :authenticate_jedi!, :set_locale
   layout "admin"

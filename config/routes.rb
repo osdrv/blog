@@ -6,6 +6,7 @@ Blog::Application.routes.draw do
 
   namespace :edit do
     resources :topics
+    resources :t_blogs
   end
 
   root :to => "topics#index"

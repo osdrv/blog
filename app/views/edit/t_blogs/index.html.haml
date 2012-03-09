@@ -1,0 +1,15 @@
+%h1 Блоги
+
+- if collection.length > 10
+  %a.btn.btn-primary{ :href => "#{new_resource_url}" }
+    %i.icon-plus-sign.icon-white
+    Новый блог
+
+%ul
+  - collection.each do |blog|
+    %li
+      %a{ :href => "#{edit_resource_url( blog )}" } #{blog.domain}
+
+%a.btn.btn-primary{ :href => "#{new_resource_url}" }
+  %i.icon-plus-sign.icon-white
+  Новый блог
