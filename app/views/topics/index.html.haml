@@ -1,4 +1,5 @@
 .left
+  %h1 #{ @current_blog.title }
   .topic-list
     - collection.each do |topic|
       .topic
@@ -8,7 +9,7 @@
         .text
           = nl2br( text_cut( topic.text ) ).html_safe
           %a{ :href => "#{topic_url( topic.slug )}" }
-            %span ●●●
+            %span #{t :read_more }
         - if topic.tags.any?
           .tags
             - topic.tags.each do |tag|

@@ -23,3 +23,5 @@ ru:
   time:
     formats:
       short: "%H:%M"
+
+  read_more: Читать дальше

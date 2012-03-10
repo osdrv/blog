@@ -11,3 +11,5 @@ en:
   time:
     formats:
       short: "%H:%M"
+  
+  read_more: Read more
