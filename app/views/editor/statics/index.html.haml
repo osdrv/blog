@@ -1,0 +1,15 @@
+%h1 Статика
+
+- if collection.length > 10
+  %a.btn.btn-primary{ :href => "#{new_resource_url}" }
+    %i.icon-plus-sign.icon-white
+    Новая статичная страница
+
+%ul
+  - collection.each do |static|
+    %li
+      %a{ :href => "#{edit_resource_url( static )}" } #{static.title}@#{static.t_blog.title}
+
+%a.btn.btn-primary{ :href => "#{new_resource_url}" }
+  %i.icon-plus-sign.icon-white
+  Новая статичная страница

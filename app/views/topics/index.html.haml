@@ -1,3 +1,8 @@
+- content_for :header do
+  %a{ :href => "#{root_path}" }
+    %img{ :src => "/assets/4pcbr.png" }
+
+
 %h1 #{ @current_blog.title }
 
 - if !params[ :tag ].nil?

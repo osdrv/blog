@@ -3,6 +3,10 @@
   %meta{ :name => "keywords", :content => "#{resource.tags.join(",")}" }
   %meta{ :name => "description", :content => "#{text_cut( resource.text )}" }
 
+- content_for :header do
+  %a{ :href => "#{root_path}" }
+    %img{ :src => "/assets/4pcbr.png" }
+
 %h1 #{resource.title}
 .text
   = nl2br( resource.text ).html_safe

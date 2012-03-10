@@ -1,0 +1,9 @@
+- content_for :head do
+  %title #{resource.title}
+  %meta{ :name => "keywords", :content => "#{resource.keywords}" }
+  = resource.meta.html_safe
+
+= resource.left.html_safe
+
+- content_for :right do
+  = resource.right.html_safe

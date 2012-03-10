@@ -1,0 +1,2 @@
+module Editor::StaticsHelper
+end
