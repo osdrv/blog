@@ -1,0 +1,2 @@
+module Editor::TitleHelper
+end

@@ -7,6 +7,8 @@ Blog::Application.routes.draw do
   namespace :editor do
     resources :topics
     resources :t_blogs
+
+    root :to => "title#index"
   end
 
   root :to => "topics#index"

@@ -4,6 +4,7 @@ class TBlog
 
   field :title, :type => String
   field :domain, :type => String
+  field :layout, :default => "application"
 
   has_many :topics
 

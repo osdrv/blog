@@ -12,3 +12,4 @@ ru:
       t_blog:
         title: Название
         domain: Адрес
+        layout: Лейаут
