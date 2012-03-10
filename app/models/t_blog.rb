@@ -13,4 +13,11 @@ class TBlog
   validates_uniqueness_of :domain
   validates_presence_of :domain
   validates_presence_of :title
+
+
+  class << self
+    def for_domain( domain )
+      first( :conditions => { :domain => domain } )
+    end
+  end
 end
