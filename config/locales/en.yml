@@ -5,7 +5,7 @@ en:
   date:
     formats:
       default: "%B %d"
-      html: "%d<span>%B</span>"
+      html: "<span>%B</span>, %d"
       with_year: "%d %B %Y"
 
   time:
