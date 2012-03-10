@@ -1,7 +1,7 @@
 - content_for :head do
   %title #{resource.title}
   %meta{ :name => "keywords", :content => "#{resource.tags.join(",")}" }
-  %meta{ :name => "description", :content => "#{text_cut( resource.text )}" }
+  %meta{ :name => "description", :content => "#{strip_tags( text_cut( resource.text ) )}" }
 
 - content_for :header do
   %a{ :href => "#{root_path}" }
