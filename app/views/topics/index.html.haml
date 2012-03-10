@@ -1,1 +1,9 @@
-%h1 
+- collection.each do |topic|
+  .topic
+    %h4
+      %a{ :href => "#{topic_url( topic )}" }
+        #{topic.title}
+    .text
+      = nl2br( text_cut( topic.text ) ).html_safe
+    .date
+      =l( topic.created_at.to_date, :format => :html ).html_safe

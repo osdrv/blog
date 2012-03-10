@@ -20,6 +20,12 @@ class Topic
   validates_presence_of :title
   validates_presence_of :t_blog
 
+  scope :active, where( :is_draft.ne => true )
+  scope :from_blog, ->( blog ) {
+    blog_id = ( blog.is_a? TBlog ) ? blog.id.to_s : blog.to_s
+    where( :t_blog_id => blog_id )
+  }
+
   alias :base_tags= :tags=
   def tags=( tags )
     tags = tags.split(/\,\s*/).compact if tags.is_a?( String )

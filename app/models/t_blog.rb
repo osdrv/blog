@@ -5,6 +5,7 @@ class TBlog
   field :title, :type => String
   field :domain, :type => String
   field :layout, :default => "application"
+  field :locale, :default => "en"
 
   has_many :topics
 

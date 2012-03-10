@@ -6,6 +6,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    %a{ :href => "#{editor_root_path}" }
+      %img{ :src => "/assets/death_star.png" }/
     - if !notice.blank?
       %p.notice
         = notice

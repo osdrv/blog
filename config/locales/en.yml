@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  date:
+    formats:
+      default: "%B %d"
+      html: "%d<span>%B</span>"
+      with_year: "%d %B %Y"
+
+  time:
+    formats:
+      short: "%H:%M"

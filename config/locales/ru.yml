@@ -13,3 +13,13 @@ ru:
         title: Название
         domain: Адрес
         layout: Лейаут
+        locale: Локаль
+  date:
+    formats:
+      default: "%B %d"
+      html: "%d <span>%B</span>"
+      with_year: "%d %B %Y"
+
+  time:
+    formats:
+      short: "%H:%M"

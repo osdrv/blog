@@ -12,6 +12,10 @@
     .controls
       = f.text_field :layout, :style => "width: 640px;"
   .control-group
+    = f.label :locale, :class => "control-label"
+    .controls
+      = f.select :locale, [ :en, :ru ]
+  .control-group
     = f.submit "Сохранить", :class => "btn btn-primary"
     %a.btn.btn-inverse{ :href => "#{collection_url}" }
       %i.icon-arrow-left.icon-white
