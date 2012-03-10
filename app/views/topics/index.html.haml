@@ -14,7 +14,7 @@
 
 .topic-list
   - collection.each do |topic|
-    .topic
+    .topic.margin-top-40
       %h2
         %a{ :href => "#{topic_url( topic.slug )}" }
           #{topic.title}
@@ -22,7 +22,7 @@
         = nl2br( text_cut( topic.text ) ).html_safe
         %a{ :href => "#{topic_url( topic.slug )}" }
           %span #{t :read_more }
-      .date
+      .date.margin-top-20
         %i.icon-pencil
         =l( topic.created_at.to_date, :format => :html ).html_safe
         - topic.tags.each do |tag|
