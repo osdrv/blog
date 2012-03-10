@@ -19,7 +19,7 @@
         %a{ :href => "#{topic_url( topic.slug )}" }
           #{topic.title}
       .text
-        = nl2br( text_cut( topic.text ) ).html_safe
+        = text_cut( topic.text ).html_safe
         %a{ :href => "#{topic_url( topic.slug )}" }
           %span #{t :read_more }
       .date.margin-top-20

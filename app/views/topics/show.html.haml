@@ -9,7 +9,7 @@
 
 %h1 #{resource.title}
 .text
-  = nl2br( resource.text ).html_safe
+  = resource.text.html_safe
 .date.margin-top-40
   %i.icon-pencil
   =l( resource.created_at.to_date, :format => :html ).html_safe
