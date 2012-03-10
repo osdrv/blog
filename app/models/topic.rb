@@ -11,8 +11,15 @@ class Topic
 
   belongs_to :t_blog
 
-  sluggable :slug
+  sluggable :slug do |topic|
+    Russian.translit topic.title
+  end
 
   validates_presence_of :t_blog
 
+  alias :base_tags= :tags=
+  def tags=( tags )
+    tags = tags.split(/\,\s*/).compact if tags.is_a?( String )
+    self.base_tags = tags
+  end
 end

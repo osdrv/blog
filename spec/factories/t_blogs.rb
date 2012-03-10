@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :t_blog do
-    title "MyString"
-    domain "MyString"
+    title Factory.next( :string )
+    domain Factory.next( :domain )
   end
 end

@@ -2,7 +2,7 @@ ru:
   helpers:
     label:
       topic:
-        t_blog: Блог
+        t_blog_id: Блог
         title: Заголовок
         slug: Хеш
         text: Текст
