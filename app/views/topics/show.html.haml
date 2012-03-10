@@ -1,0 +1,20 @@
+- content_for :head do
+  %title #{resource.title}
+  %meta{ :name => "keywords", :content => "#{resource.tags.join(",")}" }
+  %meta{ :name => "description", :content => "#{text_cut( resource.text )}" }
+
+.left
+  %h1 #{resource.title}
+  .text
+    = nl2br( resource.text ).html_safe
+  .date.margin-top-40
+    %i.icon-pencil
+    =l( resource.created_at.to_date, :format => :html ).html_safe
+    - resource.tags.each do |tag|
+      %a.btn.btn-mini{ :href => "#{topics_path( :tag => tag )}"}
+        %i.icon-tag
+        = tag
+
+  .clear-both{ :style => "margin-top: 40px;"}
+
+.right
