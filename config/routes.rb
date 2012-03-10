@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
   devise_for :jedis
 
   resources :topics
+  match "topics(/tag/:tag)" => "topics#index", :as => :topics
   match "topic/:slug" => "topics#show", :as => :topic
 
   namespace :editor do

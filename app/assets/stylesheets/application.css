@@ -19,3 +19,6 @@ body { padding: 20px; }
 .field_with_errors .input-prepend .add-on,.field_with_errors .input-append .add-on{color:#b94a48;background-color:#f2dede;border-color:#b94a48;}
 
 .clear-both{ clear: both; }
+
+.right{ width: 30%; float: left; }
+.left{ width: 60%; float: left; height: 100%; }

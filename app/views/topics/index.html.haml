@@ -1,5 +1,13 @@
 .left
   %h1 #{ @current_blog.title }
+
+  - if !params[ :tag ].nil?
+    .tags
+      %h4
+        %a.btn.btn-large.btn-success
+          %i.icon-tag.icon-white
+          = params[ :tag ]
+
   .topic-list
     - collection.each do |topic|
       .topic
@@ -10,14 +18,11 @@
           = nl2br( text_cut( topic.text ) ).html_safe
           %a{ :href => "#{topic_url( topic.slug )}" }
             %span #{t :read_more }
-        - if topic.tags.any?
-          .tags
-            - topic.tags.each do |tag|
-              %a.btn.btn-mini{ :href => "#"}
-                %i.icon-tag
-                = tag
         .date
           %i.icon-pencil
           =l( topic.created_at.to_date, :format => :html ).html_safe
+          - topic.tags.each do |tag|
+            %a.btn.btn-mini{ :href => "#{topics_path( :tag => tag )}"}
+              %i.icon-tag
+              = tag
 .right
-  %br/

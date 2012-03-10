@@ -25,6 +25,7 @@ class Topic
     blog_id = ( blog.is_a? TBlog ) ? blog.id.to_s : blog.to_s
     where( :t_blog_id => blog_id )
   }
+  scope :tag, ->( tag ) { any_in( :tags => [ tag ] ) }
 
   alias :base_tags= :tags=
   def tags=( tags )

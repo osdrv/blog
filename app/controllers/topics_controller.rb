@@ -1,5 +1,7 @@
 class TopicsController < InheritedController
   
+  has_scope :tag
+
   protected
 
   def collection
