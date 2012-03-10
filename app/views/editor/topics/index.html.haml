@@ -8,7 +8,7 @@
 %ul
   - collection.each do |topic|
     %li
-      %a{ :href => "#{resource_url( topic )}" } topic.title
+      %a{ :href => "#{edit_resource_url( topic )}" } #{topic.title}@#{topic.t_blog.title}
 
 %a.btn.btn-primary{ :href => "#{new_resource_url}" }
   %i.icon-plus-sign.icon-white

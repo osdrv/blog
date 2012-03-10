@@ -26,7 +26,7 @@ module Mongoid
 
     included do
       def update_slug
-        ( self.slug = Mongoid::Sluggable.filter_slug( self.class.__slug_getter.call( self ) ).downcase ) if slug.blank?
+        ( self.slug = Mongoid::Sluggable.filter_slug( self.class.__slug_getter.call( self ) ).downcase rescue "" ) if slug.blank?
       end
     end
 

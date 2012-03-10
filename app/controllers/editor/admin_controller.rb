@@ -1,4 +1,4 @@
-class Edit::AdminController < InheritedResources::Base
+class Editor::AdminController < InheritedResources::Base
   
   include InheritedResources::SociableGuy
   

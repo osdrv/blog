@@ -1,4 +1,4 @@
-= form_for [:edit, resource] do |f|
+= form_for [:editor, resource] do |f|
   .field
     = f.label :t_blog_id
     = f.select :t_blog_id, TBlog.all.map{ |b| [ "#{b.title}@#{b.domain}", b.id ] }
@@ -13,7 +13,7 @@
     = f.text_area :text, :rows => 20, :style => "width: 640px;"
   .field
     = f.label :tags
-    = f.text_field :tags, :style => "width: 640px;"
+    = f.text_field :tags, :style => "width: 640px;", :value => ( resource.tags.join(", ") rescue "" )
   .field
     = f.label :is_draft
     = f.check_box :is_draft
@@ -28,6 +28,6 @@
       %i.icon-arrow-left.icon-white
       К списку
     - if !resource.new?
-      %a.btn.btn-danger{ :href => "#{resource_url}", :method => "delete", :confirm => "Удалить топик?" }
+      %a.btn.btn-danger{ :href => "#{resource_url}", :method => "delete", :confirm => "Удалить топик?", :success => "(function(){window.location.href=\"#{collection_url}\"})" }
         %i.icon-remove.icon-white
         Удалить

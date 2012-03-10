@@ -1,2 +1,0 @@
-module Edit::TBlogsHelper
-end

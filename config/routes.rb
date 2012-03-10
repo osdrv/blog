@@ -4,7 +4,7 @@ Blog::Application.routes.draw do
 
   resources :topics
 
-  namespace :edit do
+  namespace :editor do
     resources :topics
     resources :t_blogs
   end
