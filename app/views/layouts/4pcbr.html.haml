@@ -8,6 +8,10 @@
   %body
     %a{ :href => "#{root_path}" }
       %img{ :src => "/assets/4pcbr.png" }
-    = yield
+    .left
+      = yield
+    .right
+      = yield :right
+    .clear-both.margin-bottom-40
     = yield :footer
     = render "4pcbr/counters"

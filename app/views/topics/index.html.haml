@@ -1,28 +1,28 @@
-.left
-  %h1 #{ @current_blog.title }
+%h1 #{ @current_blog.title }
 
-  - if !params[ :tag ].nil?
-    .tags
-      %h4
-        %a.btn.btn-large.btn-success
-          %i.icon-tag.icon-white
-          = params[ :tag ]
+- if !params[ :tag ].nil?
+  .tags
+    %h4
+      %a.btn.btn-large.btn-success
+        %i.icon-tag.icon-white
+        = params[ :tag ]
 
-  .topic-list
-    - collection.each do |topic|
-      .topic
-        %h2
-          %a{ :href => "#{topic_url( topic.slug )}" }
-            #{topic.title}
-        .text
-          = nl2br( text_cut( topic.text ) ).html_safe
-          %a{ :href => "#{topic_url( topic.slug )}" }
-            %span #{t :read_more }
-        .date
-          %i.icon-pencil
-          =l( topic.created_at.to_date, :format => :html ).html_safe
-          - topic.tags.each do |tag|
-            %a.btn.btn-mini{ :href => "#{topics_path( :tag => tag )}"}
-              %i.icon-tag
-              = tag
-.right
+.topic-list
+  - collection.each do |topic|
+    .topic
+      %h2
+        %a{ :href => "#{topic_url( topic.slug )}" }
+          #{topic.title}
+      .text
+        = nl2br( text_cut( topic.text ) ).html_safe
+        %a{ :href => "#{topic_url( topic.slug )}" }
+          %span #{t :read_more }
+      .date
+        %i.icon-pencil
+        =l( topic.created_at.to_date, :format => :html ).html_safe
+        - topic.tags.each do |tag|
+          %a.btn.btn-mini{ :href => "#{topics_path( :tag => tag )}"}
+            %i.icon-tag
+            = tag
+
+= render "4pcbr/right_pane"
