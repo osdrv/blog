@@ -1,11 +1,14 @@
 class InheritedController < InheritedResources::Base
+  
+  class NotFoundException < Exception ; end
+
   respond_to :json, :html
 
   before_filter :define_blog!
 
   def define_blog!
     @current_blog = TBlog.for_domain( request.host.to_s )
-    raise "Unknown host" if @current_blog.nil?
+    raise NotFoundException if @current_blog.nil?
     self.class.send( :layout, @current_blog.layout )
     I18n.locale = @current_blog.locale.to_sym
     if controller_views_dir.grep(/#{action_name}\.#{@current_blog.layout}/).any?
@@ -27,6 +30,22 @@ class InheritedController < InheritedResources::Base
           self.controller_name
         )
       )
-    )
+    ) rescue []
+  end
+
+  [ActionController::RoutingError, NotFoundException].each do |e|
+    rescue_from(e, :with => :response_404)
+  end
+
+  %w(403 404 500).each do |status|
+    define_method("response_#{status}") do
+      response.headers["Connection"] = "close"
+      params[:format] ||= "html"
+      if params[:format].to_s == "html"
+        render :status => status, :template => "errors/#{status}", :layout => false
+      else
+        render :status => status, :text => ""
+      end
+    end
   end
 end

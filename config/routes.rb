@@ -18,4 +18,5 @@ Blog::Application.routes.draw do
 
   root :to => "topics#index"
 
+  match "*a", :to => "inherited#response_404"
 end

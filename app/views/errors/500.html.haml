@@ -1,0 +1,36 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+      %title ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+  %body
+    :css
+      body { font: 18px Arial,Helvetica,"Nimbus Sans L",sans-serif; color: #313131; text-align: center; }
+      * { margin: 0; padding: 0; }
+      ul { text-align: left; width: 255px; }
+      ul li { list-style-type: none; line-height: 40px; }
+      ul li:hover { color: #A3A3A3; list-style-type: disc; }
+      a { color: #7FA0B0; font-style: bold; }
+      a:hover { color: #A3A3A3; }
+      pre{ font-family: monaco; text-align: left;}
+    - 20.times do
+      %h4{:style => "font-size: 80px;"} #{"☆★"*10}
+    %br/
+    %a{:href => "http://4pcbr.com"} 4pcbr.com
+    %br/
+    %a{:href => "mailto://me@4pcbr.com"} me@4pcbr.com
+    / Yandex.Metrika counter
+    %div{:style => "display:none;"}
+      :javascript
+        (function(w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter10763764 = new Ya.Metrika({id:10763764, enableAll: true});
+                }
+                catch(e) { }
+            });
+        })(window, "yandex_metrika_callbacks");
+    %script{:defer => "defer", :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript"}
+    %noscript
+      %div
+        %img{:alt => "", :src => "//mc.yandex.ru/watch/10763764", :style => "position:absolute; left:-9999px;"}/
+    / /Yandex.Metrika counter
