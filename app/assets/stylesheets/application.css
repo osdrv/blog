@@ -22,3 +22,4 @@ body { padding: 20px; }
 
 .right{ width: 30%; float: left; }
 .left{ width: 60%; float: left; height: 100%; }
+.icons a, .icons a:hover { text-decoration: none; }
