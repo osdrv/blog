@@ -9,9 +9,9 @@
     %a{ :href => "#{editor_root_path}" }
       %img{ :src => "/assets/death_star.png" }/
     - if !notice.blank?
-      %p.notice
+      .alert.alert-success
         = notice
     - if !alert.blank?
-      %p.alert
+      .alert.alert-error
         = alert
     = yield

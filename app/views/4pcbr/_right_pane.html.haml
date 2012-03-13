@@ -1,18 +1,31 @@
 - content_for :right do
-  .icons
-    .align-center
+  %ul.nav.nav-list
+    %li.nav-header
+      Social links
+    %li
       %a{:href => "https://github.com/4pcbr", :title => "My github repos"}
         %img{:src => "/assets/media/octocat.png"}/
+    %li
       %a{:href => "http://careers.stackoverflow.com/4pcbr", :title => "My CV on careers.stackoverflow.com"}
         %img{:src => "/assets/media/careers.png"}/
+    %li
       %a{:href => "http://twitter.com/4pcbr", :title => "My profile on twitter"}
         %img{:src => "/assets/media/twitter.png"}/
+    %li
       %a{:href => "http://4pcbr.habrahabr.ru/", :title => "My profile on habrahabr"}
         %img{:src => "/assets/media/habr.png"}/
-    .align-center
-      %a{:href => "http://i.4pcbr.com/", :title => "Mac screen capture uploader"}
-        %img{:src => "/assets/media/uploader_80.png"}/
-      %a{:href => "http://bundles.4pcbr.com/", :title => "TextMate CP1251 bundles"}
-        %img{:src => "/assets/media/mate_80.png"}/
-      %a{:href => "http://light.4pcbr.com", :title => "Arduino stuff"}
-        %img{:src => "/assets/media/light_80.png"}/
+    %li.nav-header
+      Some extra stuff
+    %li
+      %a{ :href => "http://i.4pcbr.com/" }
+        %i.icon-upload
+        Screenshot uploader for MacOS
+    %li
+      %a{ :href => "http://i.4pcbr.com/" }
+        %i.icon-cog
+        TextMate CP1251 bundles
+    %li
+      %a{ :href => "http://light.4pcbr.com" }
+        %i.icon-plus-sign
+        %i.icon-minus-sign{ :style => "margin-left: -10px;" }
+        Arduino stuff
