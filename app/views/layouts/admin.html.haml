@@ -10,8 +10,10 @@
       %img{ :src => "/assets/death_star.png" }/
     - if !notice.blank?
       .alert.alert-success
+        %a.close{ "data-dismiss" => "alert" } ×
         = notice
     - if !alert.blank?
       .alert.alert-error
+        %a.close{ "data-dismiss" => "alert" } ×
         = alert
     = yield
