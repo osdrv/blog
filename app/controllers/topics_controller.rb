@@ -10,5 +10,7 @@ class TopicsController < InheritedController
 
   def resource
     @topic ||= resource_class.active.from_blog( @current_blog ).slugged( params[ :slug ] )
+    raise NotFoundException if @topic.nil?
+    @topic
   end
 end
