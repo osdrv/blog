@@ -2,6 +2,7 @@
 %html
   %head
     %title #{@current_blog.title rescue ""}
+    %meta{:content => "4a6d00d2f4f8b539", :name => "yandex-verification"}/
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
