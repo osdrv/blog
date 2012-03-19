@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title #{@current_blog.title rescue ""}
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    - if !@current_blog.blank?
+      %h1
+        %a{ :href => "#{root_url}" } #{@current_blog.title}
+    = yield
