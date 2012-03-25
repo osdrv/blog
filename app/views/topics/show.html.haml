@@ -3,10 +3,6 @@
   %meta{ :name => "keywords", :content => "#{resource.tags.join(",")}" }
   %meta{ :name => "description", :content => "#{strip_tags( text_cut( resource.text ) )}" }
 
-- content_for :header do
-  %a{ :href => "#{root_path}" }
-    %img{ :src => "/assets/4pcbr.png" }
-
 %h1 #{resource.title}
 .text
   = resource.text.html_safe
@@ -17,5 +13,3 @@
     %a.btn.btn-mini{ :href => "#{topics_path( :tag => tag )}"}
       %i.icon-tag
       = tag
-
-= render "4pcbr/right_pane"
