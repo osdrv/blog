@@ -12,7 +12,7 @@
         %a{ :href => "#{topic_url( topic.slug )}" }
           #{topic.title}
       .text
-        = text_cut( topic.text ).html_safe
+        = markdown( text_cut( topic.text ) )
         .clear-both
         %a{ :href => "#{topic_url( topic.slug )}" }
           %span #{t :read_more }
