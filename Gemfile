@@ -8,6 +8,9 @@ gem "inherited_resources", "~> 1.3.0"
 gem "devise", "~> 2.0.4"
 gem "haml", "~> 3.1.4"
 gem "russian", "~> 0.6.0"
+gem "redcarpet", "~> 2.1.1"
+gem "pygments.rb", "~> 0.2.8"
+#gem "nokogiri", "~> 1.5.2"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.3"
