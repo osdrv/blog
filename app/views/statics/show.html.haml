@@ -3,7 +3,7 @@
   %meta{ :name => "keywords", :content => "#{resource.keywords}" }
   = resource.meta.html_safe
 
-= resource.left.html_safe
+= markdown( resource.left )
 
 - content_for :right do
-  = resource.right.html_safe
+  = markdown( resource.right )
