@@ -1,5 +1,5 @@
 $(() ->
   $("body.admin textarea").bind( "mousewheel", ( e ) ->
-    _c( e )
+    _e.stopPropagation()
   )
 )
