@@ -2,10 +2,10 @@
 %html
   %head
     %title Blog
-    = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "editor/admin", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
+  %body.admin
     %a{ :href => "#{editor_root_path}" }
       %img{ :src => "/assets/death_star.png" }/
     - if !notice.blank?
