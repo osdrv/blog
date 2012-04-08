@@ -4,7 +4,8 @@ $(() ->
     scroll_lock = true
   ).bind( "blur", () ->
     scroll_lock = false
-  ).bind( "mousewheel", ( e ) ->
+  )
+  $("body.admin").bind( "mousewheel", ( e ) ->
     _c( e ) if scroll_lock
   )
 )
