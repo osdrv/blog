@@ -13,3 +13,10 @@ en:
       short: "%H:%M"
   
   read_more: Read more
+  
+  views:
+    pagination:
+      previous: "--"
+      next: "++"
+      last: ".last"
+      first: ".first"

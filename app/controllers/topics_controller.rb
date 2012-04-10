@@ -1,6 +1,7 @@
 class TopicsController < InheritedController
   
   has_scope :tag
+  has_scope :page, :default => 1
 
   protected
 

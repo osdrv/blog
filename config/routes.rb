@@ -15,8 +15,10 @@ Blog::Application.routes.draw do
 
     root :to => "title#index"
   end
-
-  root :to => "topics#index"
+  
+  match "p/:page", :to => "topics#index"
+  
+  root :to => "topics#index", :page => 1
 
   match "*a", :to => "inherited#response_404"
 end

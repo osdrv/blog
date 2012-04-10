@@ -11,6 +11,7 @@ gem "russian", "~> 0.6.0"
 gem "redcarpet", "~> 2.1.1"
 gem "pygments.rb", "~> 0.2.8"
 #gem "nokogiri", "~> 1.5.2"
+gem "kaminari", "~> 0.13.0"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.3"
