@@ -6,11 +6,12 @@ window._c = (e) ->
   e.stopPropagation()
 
 $(()->
-  $('a[href="#"]').live('click', (e) ->
+  
+  $('a[href="#"]').on('click', (e) ->
     e.preventDefault()
   )
 
-  $('a[method]').live('click', (e) ->
+  $('a[method]').on('click', (e) ->
     _c(e)
     a = $(this)
     konfirm = a.attr('confirm')
@@ -30,7 +31,7 @@ $(()->
       cb()
   )
 
-  $("a.submit").live( "click", ( e ) ->
+  $("a.submit").on( "click", ( e ) ->
   	_c( e )
   	$(this).closest( "form" ).submit()
   )

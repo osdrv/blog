@@ -10,7 +10,6 @@ gem "haml", "~> 3.1.4"
 gem "russian", "~> 0.6.0"
 gem "redcarpet", "~> 2.1.1"
 gem "pygments.rb", "~> 0.2.8"
-#gem "nokogiri", "~> 1.5.2"
 gem "kaminari", "~> 0.13.0"
 
 group :assets do
@@ -19,7 +18,7 @@ group :assets do
   gem "uglifier", ">= 1.0.3"
 end
 
-gem "jquery-rails"
+gem "jquery-rails", "~> 2.2.1"
 
 gem "unicorn"
 
