@@ -10,6 +10,7 @@
 %h1 #{resource.title}
 .text
   = markdown( resource.text )
+
 .date.margin-top-40
   %i.icon-pencil
   =l( resource.created_at.to_date, :format => :html ).html_safe
@@ -18,7 +19,11 @@
       %i.icon-tag
       = tag
 
-#hypercomments_widget
+.margin-top-40
+  =render "topics/social"
+
+
+#hypercomments_widget.margin-top-40
 
 = render "4pcbr/right_pane"
 
