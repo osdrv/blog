@@ -1,3 +1,8 @@
+- content_for :head do
+  %title 4pcbr's technical blog
+  %meta{ :name => "keywords", :content => "4pcbr, programming, technologies, web, tutorials" }
+  %meta{ :name => "description", :content => "This is my technical blog about some interesting programming issues, metodologies, development techniques." }
+
 - content_for :header do
   %a{ :href => "#{root_path}" }
     %img{ :src => "/assets/oleg.jpg" }
